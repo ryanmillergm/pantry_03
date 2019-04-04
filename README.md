@@ -20,53 +20,14 @@ Use TDD to build an `Ingredient` class with the following attributes:
 
 ## Iteration 2
 
-Use TDD to build a `Recipe` class that responds to the following interaction pattern.
+Use TDD to build a `Recipe` class that responds to does the following:
 
-For the `add_ingredient` method, the first argument is an Ingredient, and the second argument is the amount of the ingredient required for the Recipe.
+* The recipe should have a name and way to read that data.
+* The recipe should be able to add ingredients and quantity needed for the recipe.
+* The recipe should be able to list all of its ingredients.
+* The recipe should be able to check the quantity needed of a given ingredient to make that recipe. 
+* The recipe should be able to find the total number of calories in that dish.
 
-The `total_calories` method should sum the calories of each ingredient. The calories for each ingredient can be calculated by multiplying the `calories` attribute of the Ingredient by the amount of the ingredient required for the recipe.
-
-```ruby
-pry(main)> require './lib/ingredient'
-# => true
-
-pry(main)> require './lib/recipe'
-# => true
-
-pry(main)> cheese = Ingredient.new("Cheese", "C", 100)
-# => #<Ingredient:0x007fe8438c7a70...>
-
-pry(main)> mac = Ingredient.new("Macaroni", "oz", 30)
-# => #<Ingredient:0x007fe843857f40...>
-
-pry(main)> mac_and_cheese = Recipe.new("Mac and Cheese")
-# => #<Recipe:0x007fe84383d000...>
-
-pry(main)> mac_and_cheese.name
-# => "Mac and Cheese"
-
-pry(main)> mac_and_cheese.ingredients_required
-# => {}
-
-pry(main)> mac_and_cheese.add_ingredient(cheese, 2)
-
-pry(main)> mac_and_cheese.add_ingredient(mac, 8)
-
-pry(main)> mac_and_cheese.ingredients_required
-# => {#<Ingredient:0x00007fd7811553c8...> => 2, #<Ingredient:0x00007fd78110b0e8...> => 8}
-
-pry(main)> mac_and_cheese.amount_required(cheese)
-# => 2
-
-pry(main)> mac_and_cheese.amount_required(mac)       
-# => 8
-
-pry(main)> mac_and_cheese.ingredients
-# => [#<Ingredient:0x007fe8438c7a70...>, #<Ingredient:0x007fe843857f40...>]
-
-pry(main)> mac_and_cheese.total_calories
-# => 440
-```
 
 ## Iteration 3
 
