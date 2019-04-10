@@ -20,7 +20,7 @@ Use TDD to build an `Ingredient` class with the following attributes:
 
 ## Iteration 2
 
-Use TDD to build a `Recipe` class that responds to does the following:
+Use TDD to build a `Recipe` class that responds to the following:
 
 * The recipe should have a name and way to read that data.
 * The recipe should be able to add ingredients and quantity needed for the recipe. Use the method name `add_ingredient` and have it take 2 arguments.
